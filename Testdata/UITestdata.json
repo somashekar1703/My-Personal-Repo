@@ -1,0 +1,17 @@
+{
+    "TestURL":"https://rahulshettyacademy.com/client/#/auth/login",
+    "Emailid":"mahaganesh88@gmail.com",
+    "passwrd" :"Iamganesh008",
+    "productName":"ADIDAS ORIGINAL",
+    "CreditCardNumber":"4542 9931 9292 2148",
+    "ExpiryMonth":"10",
+    "ExpiryDate":"17",
+    "CVVCode":"122",
+    "NameonCard":"Tester",
+    "delayTime":300,
+    "PartialCountryName":"island",
+    "FullCountryName":" United States Minor Outlying Islands",
+    "ShippingEmailID":"mahaganesh88@gmail.com",
+    "Message":"Thankyou for the order."
+
+}

@@ -1,0 +1,31 @@
+{
+  "name": "playwright_automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "AllTest:Report-HTML": "npx playwright test",
+    "APITest": "npx playwright test --grep @APITest",
+    "UITest": "npx playwright test --grep @UITest",
+    "POMPattern": "npx playwright test --grep @UITest.*@POMPattern",
+    "Assignment": "npx playwright test --grep @Assignment",
+    "VisualTest": "npx playwright test --grep  @VisualTest",
+    "Chrome:HeadMode:UITest": "npx playwright test --headed --grep @UITest --config=playwright.config_1.js --project=Google_Chrome",
+    "Chrome:HeadlessMode:UITest": "npx playwright test --grep @UITest --config=playwright.config_1.js --project=Google_Chrome",
+    "MSEdge:HeadlessMode:UITest": "npx playwright test --grep @UITest --config=playwright.config_1.js --project=Microsoft_Edge",
+    "MSEdge:HeadMode:UITest": "npx playwright test --headed --grep @UITest --config=playwright.config_1.js --project=Microsoft_Edge",
+    "Safari:HeadMode:UITest": "npx playwright test --headed --grep @UITest --config=playwright.config_1.js --project=Safari",
+    "AllTest:Report-Allure": "rd /s /q allure-results && npx playwright test --config=playwright.config_Allure.js && allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.1.0",
+    "allure-playwright": "^3.4.1"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","99193","@UITest @POMPattern End 2 End testing in Ecommerce website using POM","Google_Chrome","Tue Oct 28 14:35:53 IST 2025","passed","Tue Oct 28 14:37:32 IST 2025","","End2EndTestingUsingPOM.spec.js","",""
+"","199451","@UITest @POMPattern E2E testing by login with emailId: MyShoppingMailId@gmail.com","Google_Chrome","Tue Oct 28 14:36:25 IST 2025","broken","Tue Oct 28 14:39:44 IST 2025","Using Parameterization Test data and POM pattern","End2EndTestingUsingPOM.spec.js","",""
+"","228694","@UITest @POMPattern E2E testing by login with emailId: mahaganesh88@gmail.com","Google_Chrome","Tue Oct 28 14:31:23 IST 2025","passed","Tue Oct 28 14:35:12 IST 2025","Using Parameterization Test data and POM pattern","End2EndTestingUsingPOM.spec.js","",""

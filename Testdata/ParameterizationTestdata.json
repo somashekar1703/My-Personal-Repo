@@ -1,0 +1,34 @@
+[
+{
+    "TestURL":"https://rahulshettyacademy.com/client/#/auth/login",
+    "Emailid":"mahaganesh88@gmail.com",
+    "passwrd" :"Iamganesh008",
+    "productName":"ADIDAS ORIGINAL",
+    "CreditCardNumber":"4542 9931 9292 2148",
+    "ExpiryMonth":"10",
+    "ExpiryDate":"17",
+    "CVVCode":"122",
+    "NameonCard":"Tester",
+    "delayTime":300,
+    "PartialCountryName":"island",
+    "FullCountryName":" United States Minor Outlying Islands",
+    "ShippingEmailID":"mahaganesh88@gmail.com",
+    "Message":"Thankyou for the order."
+},
+{
+    "TestURL":"https://rahulshettyacademy.com/client/#/auth/login",
+    "Emailid":"MyShoppingMailId@gmail.com",
+    "passwrd" :"Shiva#9922",
+    "productName":"ZARA COAT 3",
+    "CreditCardNumber":"4542 9931 9292 2209",
+    "ExpiryMonth":"12",
+    "ExpiryDate":"25",
+    "CVVCode":"262",
+    "NameonCard":"Product Owner",
+    "delayTime":400,
+    "PartialCountryName":"land",
+    "FullCountryName":" Switzerland",
+    "ShippingEmailID":"MyShoppingMailId@gmail.com",
+    "Message":"Thankyou for the order."
+}
+]
