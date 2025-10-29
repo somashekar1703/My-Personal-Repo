@@ -1,3 +1,0 @@
-Input 0: 3
-Input 1: 17
-Input 2: 1999

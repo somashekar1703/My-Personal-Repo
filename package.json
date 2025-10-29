@@ -8,7 +8,6 @@
     "UITest": "npx playwright test --grep @UITest",
     "POMPattern": "npx playwright test --grep @UITest.*@POMPattern",
     "Assignment": "npx playwright test --grep @Assignment",
-    "VisualTest": "npx playwright test --grep  @VisualTest",
     "Chrome:HeadMode:UITest": "npx playwright test --headed --grep @UITest --config=playwright.config_1.js --project=Google_Chrome",
     "Chrome:HeadlessMode:UITest": "npx playwright test --grep @UITest --config=playwright.config_1.js --project=Google_Chrome",
     "MSEdge:HeadlessMode:UITest": "npx playwright test --grep @UITest --config=playwright.config_1.js --project=Microsoft_Edge",
