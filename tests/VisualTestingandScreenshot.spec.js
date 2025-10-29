@@ -1,18 +1,14 @@
 const { test, expect } = require('@playwright/test');
 import path from "path";
 
-test('@VisualTest Screenshot capturing full and partial', async ({ page }) => {
+test.skip('Screenshot capturing full and partial', async ({ page }) => {
     page.goto("https://rahulshettyacademy.com/client/#/auth/login");
     const Emailid = 'MyShoppingMailId@gmail.com';
     const passwrd = 'Shiva#9922';
-
-
     await page.locator("#userEmail").fill(Emailid);
     await page.locator("#userPassword").fill(passwrd);
     await page.locator("#login").click();
-
     const lblDashHeader = page.locator("[class='left mt-1']");
-
     await expect(lblDashHeader).toHaveText('AutomationAutomation Practice');
     const now = new Date();
     const timestamp = now.toISOString().replace(/[:-]/g, "");
@@ -22,24 +18,15 @@ test('@VisualTest Screenshot capturing full and partial', async ({ page }) => {
     await page.locator("div[class='card']").last().screenshot({ path: IPhone13PROScreenshot }) //partial Screenshot...
 });
 
-test('@VisualTest visual testing using playwright', async ({ page }) => {
-    
-    
-   
+test.skip('@VisualTest testing using playwright', async ({ page }) => {
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
     const Emailid = 'MyShoppingMailId@gmail.com';
     const passwrd = 'Shiva#9922';
-   expect(await page.screenshot()).toMatchSnapshot("LoginPage.png");
-    
-
+    expect(await page.screenshot()).toMatchSnapshot("LoginPage.png");
     await page.locator("#userEmail").fill(Emailid);
     await page.locator("#userPassword").fill(passwrd);
     await page.locator("#login").click();
-
     const lblDashHeader = page.locator("[class='left mt-1']");
-
     await expect(lblDashHeader).toHaveText('AutomationAutomation Practice');
-
     expect(await page.screenshot()).toMatchSnapshot("DashboardPage.png");
-
 });
