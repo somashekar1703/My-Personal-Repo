@@ -8,9 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   retries:2,
-  workers:3,
-  fullyParallel: true,
-  timeout: 150 *1000,// By default, timeout will be 30s...
+  timeout: 100 *1000,// By default, timeout will be 30s...
  // Below timeout is used in assertion.
   expect :{
   timeout: 60000,

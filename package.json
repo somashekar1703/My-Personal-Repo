@@ -13,7 +13,7 @@
     "MSEdge:HeadlessMode:UITest": "npx playwright test --grep @UITest --config=playwright.config_1.js --project=Microsoft_Edge",
     "MSEdge:HeadMode:UITest": "npx playwright test --headed --grep @UITest --config=playwright.config_1.js --project=Microsoft_Edge",
     "Safari:HeadMode:UITest": "npx playwright test --headed --grep @UITest --config=playwright.config_1.js --project=Safari",
-    "AllTest:Report-Allure": "rd /s /q allure-results && npx playwright test --config=playwright.config_Allure.js && allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report"
+    "AllTest:Report-Allure": "npx playwright test --config=playwright.config_Allure.js && allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report"
   },
   "keywords": [],
   "author": "",

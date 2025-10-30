@@ -7,7 +7,7 @@ const NewContext = await browser.newContext();
 const parentpage = await NewContext.newPage();
 const url = "https://rahulshettyacademy.com/loginpagePractise/";
 await parentpage.goto(url);
-await page.evaluate(() => { document.body.style.zoom = '67%'; });
+await parentpage.evaluate(() => { document.body.style.zoom = '67%'; });
 //working on blinking link and validating based on attribute value...
 const lnkBlink = parentpage.locator("[href*='documents-request']");
 

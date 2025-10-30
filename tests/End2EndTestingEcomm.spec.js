@@ -3,10 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 test('@UITest End 2 End testing in Ecommerce website', async ({ page }) => {
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
-    await page.evaluate(()=>
-    {
-        document.body.style.zoom='67%';
-    });
+    await page.evaluate(()=>{ document.body.style.zoom='75%';});
     const Emailid = 'MyShoppingMailId@gmail.com';
     const passwrd = 'Shiva#9922';
 

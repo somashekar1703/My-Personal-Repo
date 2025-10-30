@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-
+console.log(`Running in ${process.env.CI ? "CI (headless)" : "local (headed)" } mode`);
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -8,9 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   retries:2,
-  workers:3,
-  fullyParallel: true,
-  timeout: 150 *1000,// By default, timeout will be 30s...
+  timeout: 100 *1000,// By default, timeout will be 30s...
  // Below timeout is used in assertion.
   expect :{
   timeout: 60000,
@@ -23,7 +21,8 @@ export default defineConfig({
 
       browserName:'chromium',//executes in chrome browser...
       channel:'msedge',
-      headless:false, // to run in browser.. if true, runs headless mode (not in browser)
+      headless:process.env.CI ? true : false, // to run in browser.. if true, runs headless mode (not in browser)
+      //headless:true,
       viewport:null,
       launchOptions :{
         args:['--start-maximized'],

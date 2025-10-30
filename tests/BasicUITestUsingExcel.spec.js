@@ -26,5 +26,11 @@ test('@UITest Basic UI Testing with test data using excel file', async ({ page }
             console.log(`Yes, Data has entered at row...`)
         }
     }
+    for (let i = 7; i <= 17; ++i) {
+        let isEntered = await Excel.Clearcell(i,2)
+        if (isEntered) {
+            console.log(`Yes, Data has cleared at ${i}th row...`)
+        }
+    }
 });
 

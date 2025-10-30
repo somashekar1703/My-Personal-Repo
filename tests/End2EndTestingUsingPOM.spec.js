@@ -25,7 +25,7 @@ test('@UITest @POMPattern End 2 End testing in Ecommerce website using POM', asy
     //Login Page
     const LoginPage = PgManager.getLoginPage();
     await LoginPage.GotoURL(TestURL);
-    await page.evaluate(() => { document.body.style.zoom = '67%'; });
+    await page.evaluate(() => { document.body.style.zoom = '75%'; });
     await LoginPage.GetLogin(Emailid, passwrd, "AutomationAutomation Practice");
 
     //Dashboard Page
@@ -95,7 +95,6 @@ test.describe("Using Parameterization Test data and POM pattern", () => {
             //Login Page
             const LoginPage = PgManager.getLoginPage();
             await LoginPage.GotoURL(TestURL);
-            await page.evaluate(() => { document.body.style.zoom = '67%'; });
             await LoginPage.GetLogin(Emailid, passwrd, "AutomationAutomation Practice");
 
             //Dashboard Page

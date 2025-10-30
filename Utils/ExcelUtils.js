@@ -65,7 +65,7 @@ class ExcelUtils {
     async writedataintoExcel(rownum, colnum, data) {
         if (!rownum) throw new Error("Row number not provide!.....");
         if (!colnum) throw new Error("Column number is not provided!....");
-        if (!data) throw new Error("data is missing, Give data to enter or insert in excel file");
+        if (data==undefined) throw new Error("data is missing, Give data to enter or insert in excel file");
 
         const getworkshet = await this.getWorkSheetfromExcl();
         const dataEntryCell = getworkshet.getCell(rownum, colnum)
@@ -207,6 +207,10 @@ class ExcelUtils {
             filepath: this.filepath
         }
 
+    }
+    async Clearcell(rowNo,ColNo)
+    {
+        return await this.writedataintoExcel(rowNo,ColNo,'');
     }
 
 

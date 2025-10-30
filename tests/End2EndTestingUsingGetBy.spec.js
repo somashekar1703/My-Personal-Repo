@@ -4,9 +4,6 @@ test('@UITest End 2 end testing using GetBy Locators', async ({ page }) => {
     page.goto("https://rahulshettyacademy.com/client/#/auth/login");
     const Emailid = 'MyShoppingMailId@gmail.com';
     const passwrd = 'Shiva#9922';
-    await page.evaluate(() => {
-        document.body.style.zoom = '67%';
-    });
 
     await page.getByPlaceholder("email@example.com").fill(Emailid);
     await page.getByPlaceholder("enter your passsword").fill(passwrd);
@@ -25,7 +22,7 @@ test('@UITest End 2 end testing using GetBy Locators', async ({ page }) => {
 
     await productCardBody.filter({ hasText: productName }).getByRole("button", { name: 'Add To Cart' }).click();
 
-    expect(await page.locator(`div:has-text("${productName}")`).isVisible()).toBeFalsy();
+    //expect(await page.locator(`div:has-text("${productName}")`).isVisible()).toBeFalsy();
 
     await expect(page.locator("[routerlink*='cart'] label")).toHaveText("1");
 

@@ -1,5 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { ExcelUtils } = require('../Utils/ExcelUtils');
+const os = require('os');
+const path = require('path');
 
 test('@UITest Working on Excel download and upload', async ({ page }) => {
 
@@ -8,9 +10,9 @@ test('@UITest Working on Excel download and upload', async ({ page }) => {
     const downloadpromise = page.waitForEvent('download');
     await page.locator("#downloadButton").click();
     const download = await downloadpromise;
-    const path = await download.path()
-    console.log(path);
-    const filepath = 'C:/Users/hp/Downloads/' + download.suggestedFilename();
+    const downloadfolder = await path.join(os.homedir(),'Downloads');
+    console.log("User download folder: "+downloadfolder);
+    const filepath = path.join(downloadfolder,download.suggestedFilename());
     console.log("filepath : " + filepath);
     await new Promise(r => setTimeout(r, 2000));
     await download.saveAs(filepath)

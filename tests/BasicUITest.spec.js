@@ -11,7 +11,7 @@ await page.goto('https://practicetestautomation.com/practice-test-login/');
 test('@UITest Test 002', async({page})=>
 {
 await page.goto('https://demo.applitools.com/');
-console.log(page.title());
+console.log(await page.title());
 });
 // if we want to run only single test from more than 5 tests, we can use 'only' keyword.
 test('@UITest Test 003', async({page})=>

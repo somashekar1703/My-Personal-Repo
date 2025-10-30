@@ -8,9 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   retries:2,
-  workers:2,
-  fullyParallel: true,
-  timeout: 150 *1000,// By default, timeout will be 30s...
+  timeout: 100 *1000,// By default, timeout will be 30s...
  // Below timeout is used in assertion.
   expect :{
   timeout: 60000,
@@ -21,8 +19,7 @@ export default defineConfig({
   name:'Google_Chrome', 
   use: {
       browserName:'chromium',//executes in chrome browser...
-      headless:false, // to run in browser.. if true, runs headless mode (not in browser)
-      viewport:null,
+      headless:true, // to run in browser.. if true, runs headless mode (not in browser)
       launchOptions :{
         args:['--start-maximized'],
       },
