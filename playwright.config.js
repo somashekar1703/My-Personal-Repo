@@ -7,20 +7,20 @@ console.log(`Running in ${process.env.CI ? "CI (headless)" : "local (headed)" } 
  */
 export default defineConfig({
   testDir: './tests',
-  retries:2,
-  timeout: 100 *1000,// By default, timeout will be 30s...
+  //retries:1,
+  timeout: 300 *1000,// By default, timeout will be 30s...
  // Below timeout is used in assertion.
   expect :{
   timeout: 60000,
 },
-  reporter:'html',
+  reporter:'html', //report will generate in html format...
   projects : [
     {
-  name:'Microsoft edge', //report will generate in html format...
+  name:'Google chrome', 
   use: {
 
       browserName:'chromium',//executes in chrome browser...
-      channel:'msedge',
+      //channel:'msedge',
       headless:process.env.CI ? true : false, // to run in browser.. if true, runs headless mode (not in browser)
       //headless:true,
       viewport:null,

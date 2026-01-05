@@ -15,6 +15,7 @@ test('@UITest End 2 End testing in Ecommerce website', async ({ page }) => {
 
     await expect(lblDashHeader).toHaveText('AutomationAutomation Practice');
 
+    
     const productCardBody = page.locator(".card-body");
     await productCardBody.first().waitFor();
 

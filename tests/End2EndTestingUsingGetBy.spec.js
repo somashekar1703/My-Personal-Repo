@@ -48,6 +48,7 @@ test('@UITest End 2 end testing using GetBy Locators', async ({ page }) => {
 
     expect(page.locator(".user__name label")).toHaveText(Emailid);
 
+  
     //expect(page.locator(".user__name label")))
 
     await page.getByPlaceholder("Select Country").pressSequentially("Russ", { delay: 200 });

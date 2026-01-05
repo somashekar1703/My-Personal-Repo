@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 //gmail ID: mahaganesh88@gmail.com pwd= Iamganesh008
 test('@UITest Network Intercepting which used to do security testing', async ({ page }) => {
-    page.goto("https://rahulshettyacademy.com/client/#/auth/login");
+   await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
     const Emailid = 'MyShoppingMailId@gmail.com';
     const passwrd = 'Shiva#9922';
 
@@ -24,6 +24,9 @@ test('@UITest Network Intercepting which used to do security testing', async ({ 
     await page.locator("button:has-text('View')").first().click();
 
     expect(page.locator("p[class='blink_me']")).toHaveText("You are not authorize to view this order")
+
+
+    //•	Certified Associate in Software Testing (CAST) from Mind ‘Q’ Systems, April 2022.
 
 
 
